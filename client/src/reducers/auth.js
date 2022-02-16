@@ -25,11 +25,14 @@ export default (state = initialState, action) => {
     case SIGNUP_SUCCESS:
     case LOGIN_SUCCESS:
       const user = jwtDecode(action.token).user;
+      const email = jwtDecode(action.token).email;
+      console.log(email)
       return {
         ...state,
         loading: false,
         token: action.token,
-        user
+        user, 
+        email
       };
 
     case SIGNUP_ERROR:

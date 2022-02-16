@@ -4,7 +4,19 @@ const bcrypt = require('bcryptjs');
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  admin: Boolean
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    unique: true,
+    
+    
+    match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+},
+  admin: {
+    type:Boolean,
+//default:true
+  }
 }, { collation: { locale: 'en', strength: 1 } });
 
 userSchema.set('toJSON', { getters: true });

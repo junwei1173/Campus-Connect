@@ -20,8 +20,9 @@ exports.register = async (req, res, next) => {
   }
 
   try {
-    const { username, password } = req.body;
-    const user = await User.create({ username, password });
+    const { username, password, email } = req.body;
+    const user = await User.create({ username, password, email});
+    console.log(user)
     const token = createAuthToken(user.toJSON());
     res.status(201).json({ token });
   } catch (err) {

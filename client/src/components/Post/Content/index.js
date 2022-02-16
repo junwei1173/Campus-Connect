@@ -4,6 +4,7 @@ import PostContentTitle from './Title';
 import PostContentPreview from './Preview';
 import PostContentFullText from './FullText';
 import PostContentDetail from './Detail';
+import Poll from 'react-polls';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,6 +16,11 @@ const Wrapper = styled.div`
 `;
 
 const renderContent = props => {
+  const pollQuestion = 'Is react-polls useful?'
+  const pollAnswers = [
+    { option: 'Yes', votes: 8 },
+    { option: 'No', votes: 2 }
+  ]
   switch (props.type) {
     case 'link':
       return <PostContentPreview>{props.url}</PostContentPreview>;
@@ -24,6 +30,14 @@ const renderContent = props => {
         return <PostContentFullText>{props.text}</PostContentFullText>;
       }
       return <PostContentPreview>{props.text}</PostContentPreview>;
+    case 'poll':
+      if (props.showFullPost) {
+        return <PostContentFullText>{props.text}</PostContentFullText>;
+      }
+      return <Poll question={'Is react-polls useful?'} answers={[
+        { option: 'Yes', votes: 8 },
+        { option: 'No', votes: 2 }
+      ] } />;
 
     default:
       break;
@@ -40,6 +54,7 @@ const PostContent = ({
   ...details
 }) => (
   <Wrapper>
+    
     <PostContentTitle
       url={url}
       title={title}
@@ -48,6 +63,7 @@ const PostContent = ({
       {...details}
     />
     {renderContent({ type, url, text, showFullPost })}
+    
     <PostContentDetail commentCount={commentCount} {...details} />
   </Wrapper>
 );

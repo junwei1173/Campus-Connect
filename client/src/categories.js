@@ -4,7 +4,8 @@ const categories = [
   'videos',
   'programming',
   'news',
-  'fashion'
+  'fashion',
+  'sports'
 ];
 
 export default categories;

@@ -7,7 +7,7 @@ import PostListContainer from '../PostList/Container';
 import PostListContainerVotes from '../PostList/ContainerVotes';
 import PostDetailContainer from '../PostDetail/Container';
 import SidebarContainer from '../Sidebar/Container';
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Avatar, Flex, Heading } from '@chakra-ui/react';
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,6 +58,12 @@ const Home = () => (
         path='/u/:username'
         render={({ match }) => (
           <div>
+            <Flex alignItems="center" justifyContent="center" >
+            <Avatar name={match.params.username}  mr="5"/>
+            {match.params.username} 
+            
+            </Flex>
+            <Heading  as='h4' size='md'>Here are all my Posts</Heading>
             <PostListContainer username={match.params.username} />
           </div>
         )}

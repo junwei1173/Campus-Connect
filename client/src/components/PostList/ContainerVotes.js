@@ -12,7 +12,7 @@ function compare( a, b ) {
   }
 
 export const mapStateToProps = state => {
-    console.log(state.posts.items)
+  
     state.posts.items.sort( compare );
     return({
         posts: state.posts.items,

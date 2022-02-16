@@ -1,6 +1,27 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import DeleteButton from '../../shared/DeleteButton';
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  HatenaShareButton,
+  InstapaperShareButton,
+  LineShareButton,
+  LinkedinShareButton,
+  LivejournalShareButton,
+  MailruShareButton,
+  OKShareButton,
+  PinterestShareButton,
+  PocketShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TumblrShareButton,
+  TwitterShareButton,
+  ViberShareButton,
+  VKShareButton,
+  WhatsappShareButton,
+  WorkplaceShareButton
+} from "react-share";
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,11 +48,18 @@ class PostDetailInfoBar extends React.Component {
         <span>{this.props.views} views</span>
         <span>&nbsp;|&nbsp;</span>
         <span>{this.props.upvotePercentage}% upvoted</span>
+        {
+          <button>hgvg</button>
+        }
         {this.props.token &&
           (this.props.user.id === this.props.author.id ||
             this.props.user.admin) && (
             <DeleteButton onClick={this.deletePost} />
           )}
+          {
+            <button>share</button>
+            <FacebookShareButton
+          }
       </Wrapper>
     );
   }

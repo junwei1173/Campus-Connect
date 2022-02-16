@@ -67,13 +67,13 @@ const methods = {
   }
 };
 
-export async function login(username, password) {
-  const json = await methods.post('login', { username, password });
+export async function login(username, password, Email) {
+  const json = await methods.post('login', { username, password, Email });
   return json.token;
 }
 
-export async function signup(username, password) {
-  const json = await methods.post('register', { username, password });
+export async function signup(username, password, Email) {
+  const json = await methods.post('register', { username, password, Email });
   return json.token;
 }
 

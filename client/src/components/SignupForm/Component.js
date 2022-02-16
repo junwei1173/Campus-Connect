@@ -18,8 +18,9 @@ class SignupForm extends React.Component {
     if (this.props.token) this.props.history.push('/');
   }
 
-  onSubmit = ({ username, password }) => {
-    this.props.attemptSignup(username, password);
+  onSubmit = (props) => {
+    console.log(props)
+    this.props.attemptSignup(props.username, props.password, props.Email);
   };
 
   render() {
@@ -46,6 +47,12 @@ class SignupForm extends React.Component {
           name='password2'
           label='confirm password'
           type='password'
+          component={renderField}
+        />
+         <Field
+          name='Email'
+          label='email'
+          type='email'
           component={renderField}
         />
         <SubmitButton type='submit'>sign up</SubmitButton>

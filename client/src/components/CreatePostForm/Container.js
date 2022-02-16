@@ -22,7 +22,7 @@ const validate = fields => {
   errors.title = titleValidator(title);
   if (type === 'link') errors.url = urlValidator(url);
   if (type === 'text') errors.text = textPostValidator(text);
-  errors.type = typeValidator(type);
+ // errors.type = typeValidator(type);
 
   return errors;
 };

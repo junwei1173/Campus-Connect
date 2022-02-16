@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 
 const PostDetailPost = props => (
   <Wrapper>
+
     <Post {...props} full />
   </Wrapper>
 );

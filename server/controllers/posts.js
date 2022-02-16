@@ -43,13 +43,15 @@ exports.listByUser = async (req, res) => {
 };
 
 exports.create = async (req, res, next) => {
-  const result = validationResult(req);
-  if (!result.isEmpty()) {
-    const errors = result.array({ onlyFirstError: true });
-    return res.status(422).json({ errors });
-  }
+  // const result = validationResult(req);
+  // if (!result.isEmpty()) {
+  //   const errors = result.array({ onlyFirstError: true });
+  //   return res.status(422).json({ errors });
+  // }
 
   try {
+  console.log(1)
+
     const { title, url, category, type, text } = req.body;
     const author = req.user.id;
     const post = await Post.create({

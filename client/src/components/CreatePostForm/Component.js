@@ -13,6 +13,10 @@ const postTypes = [
   {
     label: 'text',
     value: 'text'
+  },
+  {
+    label: 'poll',
+    value: 'poll'
   }
 ];
 
@@ -24,6 +28,7 @@ class CreatePostForm extends React.Component {
   }
 
   onSubmit = post => this.props.attemptCreatePost(post);
+  // onSubmit = post => console.log(post);
 
   mapCategories = () =>
     categories.map((category, index) => (
@@ -66,6 +71,21 @@ class CreatePostForm extends React.Component {
             component={renderField}
           />
         )}
+        {this.props.form.values.type === 'poll' && (
+         <div style={{width:"100%"}}>
+            <Field
+            name='text'
+            label='texwwwt'
+            type='textarea'
+
+            
+            component={renderField}
+          />
+
+         
+         </div>
+        )}
+        
         <SubmitButton type='submit'>create post</SubmitButton>
       </Form>
     );

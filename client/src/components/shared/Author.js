@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { link } from './helpers';
-import { Avatar, AvatarBadge, AvatarGroup } from '@chakra-ui/react'
+import { Avatar, AvatarBadge, AvatarGroup, Flex } from '@chakra-ui/react'
 
 const StyledLink = styled(Link)`
   ${link};
@@ -13,10 +13,13 @@ const StyledLink = styled(Link)`
 
 const Author = ({ username }) => (
 
-    <StyledLink to={`/u/${username}`}>
+
+     
+      <StyledLink to={`/u/${username}`}>
        
-     {username}
-      </StyledLink>
+       {username}
+        </StyledLink>
+
 
 );
 

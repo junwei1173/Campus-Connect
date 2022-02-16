@@ -65,6 +65,7 @@ const createPostSuccess = post => ({ type: CREATE_POST_SUCCESS, post });
 const createPostError = error => ({ type: CREATE_POST_ERROR, error });
 
 export const attemptCreatePost = post => async (dispatch, getState) => {
+  
   dispatch(createPostRequest);
   try {
     const { token } = getState().auth;

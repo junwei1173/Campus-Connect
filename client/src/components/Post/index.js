@@ -10,7 +10,9 @@ const Wrapper = styled.div`
 `;
 
 const Post = ({ id, votes, score, comments, full, ...content }) => (
+
   <Wrapper>
+    
     <PostVoteContainer id={id} votes={votes} score={score} />
     <PostContent
       showFullPost={full}

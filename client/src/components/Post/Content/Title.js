@@ -31,6 +31,10 @@ const renderTitle = props => {
     case 'text':
       if (props.full) return <span>{props.title}</span>;
       return <Link to={`/a/${props.category}/${props.id}`}>{props.title}</Link>;
+    
+    case 'poll':
+      if (props.full) return <span>{props.title}</span>;
+      return <Link to={`/a/${props.category}/${props.id}`}>{props.title}</Link>;
 
     default:
       break;

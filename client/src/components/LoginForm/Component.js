@@ -18,8 +18,8 @@ class LoginForm extends React.Component {
     if (this.props.token) this.props.history.push('/');
   }
 
-  onSubmit = ({ username, password }) => {
-    this.props.attemptLogin(username, password);
+  onSubmit = ({ username, password, Email }) => {
+    this.props.attemptLogin(username, password, Email);
   };
 
   render() {
@@ -39,6 +39,13 @@ class LoginForm extends React.Component {
           name='password'
           label='password'
           type='password'
+          component={renderField}
+          validate={passwordValidator}
+        />
+        <Field
+          name='email'
+          label='email'
+          type='email'
           component={renderField}
           validate={passwordValidator}
         />

@@ -8,8 +8,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     trim: true,
     lowercase: true,
-  
 
+     
+},
+confirmed:{
+  default:false
 },
   admin: {
     type:Boolean,

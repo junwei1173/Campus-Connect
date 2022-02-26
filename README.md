@@ -1,4 +1,19 @@
+### College based discussion web application is a platform that enables users to instantly message and connect with your peers or alumnus through their computers or mobile devices.
 
+## Features: 
+
+1. Authentication: Verification Link would be sent to his college email.
+
+2. Connection: Our app allows a  user to ask a question, answer a question, replying to a thread, upvoting/downvoting, editing or deleting a post/comment, polling system, FAQ page, sharing a post on any social media platform.
+ 
+3. Home Page:It will directly take the student in the college he is studying after he has registered to a college. For Eg : www.CampusConnect.com/
+
+4. Subcategories  : All important notices like exam schedule,fees,etc will be displayed at the home page. Subcategory section will contain information about different councils , societies, sports, academics, higher education and other extracurricular activities. For Eg :  www.CampusConnect.com/VESIT/Academics
+
+5. Admin Portal : The user with admin access can remove or edit inappropriate posts/comments.
+
+
+## Video:
 
 https://user-images.githubusercontent.com/65851817/155838647-d51fe81b-75a9-4a66-a8b7-095d757098fd.mp4
 
@@ -43,19 +58,5 @@ https://user-images.githubusercontent.com/65851817/155838647-d51fe81b-75a9-4a66-
     ```
 4. Browse to `http://localhost:3000/`
 
-## Testing
-
-### Server
-Make sure mongodb is running before testing the server.
-```bash
-$ cd server
-$ npm test
-```
-
-### Client
-```bash
-$ cd client
-$ npm test
-```
 
 

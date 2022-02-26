@@ -17,6 +17,8 @@
 
 https://user-images.githubusercontent.com/65851817/155838647-d51fe81b-75a9-4a66-a8b7-095d757098fd.mp4
 
+## Project Architecture
+![Capture](https://user-images.githubusercontent.com/65851817/155843751-afd90f05-29eb-4a38-aee2-d0e4b75c3874.PNG)
 
 
 ## Installation

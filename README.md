@@ -2,15 +2,15 @@
 
 ## Features: 
 
-1. Authentication: Verification Link would be sent to his college email.
+1. **Authentication:** Verification Link would be sent to his college email.
 
-2. Connection: Our app allows a  user to ask a question, answer a question, replying to a thread, upvoting/downvoting, editing or deleting a post/comment, polling system, FAQ page, sharing a post on any social media platform.
+2. **Connection:** Our app allows a  user to ask a question, answer a question, replying to a thread, upvoting/downvoting, editing or deleting a post/comment, polling system, FAQ page, sharing a post on any social media platform.
  
-3. Home Page:It will directly take the student in the college he is studying after he has registered to a college. For Eg : www.CampusConnect.com/
+3. **Home Page:** It will directly take the student in the college he is studying after he has registered to a college. For Eg : www.CampusConnect.com/
 
-4. Subcategories  : All important notices like exam schedule,fees,etc will be displayed at the home page. Subcategory section will contain information about different councils , societies, sports, academics, higher education and other extracurricular activities. For Eg :  www.CampusConnect.com/VESIT/Academics
+4. **Subcategories :** All important notices like exam schedule,fees,etc will be displayed at the home page. Subcategory section will contain information about different councils , societies, sports, academics, higher education and other extracurricular activities. For Eg :  www.CampusConnect.com/VESIT/Academics
 
-5. Admin Portal : The user with admin access can remove or edit inappropriate posts/comments.
+5. **Admin Portal :** The user with admin access can remove or edit inappropriate posts/comments.
 
 
 ## Video:

@@ -8,7 +8,7 @@ const jwtStrategy = require('./auth/jwt');
 
 const app = express();
 
-console.log("Server Started!")
+console.log("Finally Server Started!")
 app.use(cors());
 app.use(express.json());
 app.use(expressValidator());

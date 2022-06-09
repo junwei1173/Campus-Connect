@@ -29,14 +29,14 @@ https://user-images.githubusercontent.com/65851817/155838647-d51fe81b-75a9-4a66-
 * Npm
 * Mongodb
 
-1. Clone this repository
+1. Clone this repository.
 
-2. Install server dependencies
+2. Install server dependencies.
     ```bash
     $ cd server
     $ npm install
     ```
-3. Install client dependencies
+3. Install client dependencies.
     ```bash
     $ cd client
     $ npm install

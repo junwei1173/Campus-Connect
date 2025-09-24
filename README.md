@@ -1,4 +1,4 @@
-### College based forum discussion application similar to reddit.
+### College based platform where users can post forums and discuss with their peers.
 
 ## Video:
 

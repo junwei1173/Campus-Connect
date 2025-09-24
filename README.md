@@ -1,4 +1,4 @@
-### College based platform where users can post forums and discuss with their peers.
+### College web-based platform where users can post forums to discuss with their peers and check college events.
 
 ## Video:
 

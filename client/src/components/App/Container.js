@@ -1,39 +1,32 @@
 import React from 'react';
-import { StreamChat } from 'stream-chat';
-import { Chat, Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } from 'stream-chat-react';
+import { ThemeProvider } from 'styled-components';
+import { Router, Route, Switch } from 'react-router-dom';
+import theme from '../../theme';
+import history from '../../util/history';
+import GlobalStyle from '../../globalStyle';
+import HeaderContainer from '../Header/Container';
+import ErrorNotificationContainer from '../ErrorNotification/Container';
+import LoginFormContainer from '../LoginForm/Container';
+import SignupFormContainer from '../SignupForm/Container';
+import CreatePostFormContainer from '../CreatePostForm/Container';
+import Home from '../Home';
 
-import 'stream-chat-react/dist/css/index.css';
-
-const chatClient = StreamChat.getInstance('pwjajzfrgn2d');
-const userToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoicmVkLXJlc29uYW5jZS05In0.wMlibjNbDkc2HGnQx_G6M0IZlbNW3AQf28liZWYiah4';
-
-chatClient.connectUser(
-  {
-    id: 'red-resonance-9',
-    name: 'red-resonance-9',
-    image: 'https://getstream.io/random_png/?id=red-resonance-9&name=red-resonance-9',
-  },
-  userToken,
-);
-
-const channel = chatClient.channel('messaging', 'custom_channel_id', {
-  // add as many custom fields as you'd like
-  image: 'https://www.drupal.org/files/project-images/react.png',
-  name: 'Talk about React',
-  members: ['red-resonance-9'],
-});
-
-const App = () => (
-  <Chat client={chatClient} theme='messaging light'>
-    <Channel channel={channel}>
-      <Window>
-        <ChannelHeader />
-        <MessageList />
-        <MessageInput />
-      </Window>
-      <Thread />
-    </Channel>
-  </Chat>
+const App = props => (
+  <ThemeProvider theme={theme(props.dark)}>
+    <Router history={history}>
+      <>
+        <GlobalStyle />
+        <Route component={HeaderContainer} />
+        <Route component={ErrorNotificationContainer} />
+        <Switch>
+          <Route path='/login' component={LoginFormContainer} />
+          <Route path='/signup' component={SignupFormContainer} />
+          <Route path='/createpost' component={CreatePostFormContainer} />
+          <Route path='/' component={Home} />
+        </Switch>
+      </>
+    </Router>
+  </ThemeProvider>
 );
 
 export default App;
